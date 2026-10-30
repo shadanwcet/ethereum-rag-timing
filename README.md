@@ -1,6 +1,6 @@
 # Replication Package: Matched-Wait Evaluation of Retrieval-Augmented Transaction Timing under Ethereum EIP-1559
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23799506.svg)](https://doi.org/10.5281/zenodo.23799506)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23813774.svg)](https://doi.org/10.5281/zenodo.23813774)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Provenance: Verified](https://img.shields.io/badge/Provenance-VERIFIED__PASS-brightgreen.svg)](reproducibility_package/passport.yaml)
 [![Python: 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](reproducibility_package/requirements.txt)
