@@ -92,4 +92,4 @@ results/                    generated figures, primary tables, and ablation repo
 **DOI:** [10.5281/zenodo.23813774](https://doi.org/10.5281/zenodo.23813774)  
 
 **Citation:**  
-> Mohammad Pasha and Mohammed Ali Shaik. (2026). *Replication Package: Matched-Wait Evaluation of Retrieval-Augmented Transaction Timing under Ethereum EIP-1559*. Zenodo. DOI: [10.5281/zenodo.23799506](https://doi.org/10.5281/zenodo.23813774).
+> Mohammad Pasha and Mohammed Ali Shaik. (2026). *Replication Package: Matched-Wait Evaluation of Retrieval-Augmented Transaction Timing under Ethereum EIP-1559*. Zenodo. DOI: [10.5281/zenodo.23813774](https://doi.org/10.5281/zenodo.23813774).
