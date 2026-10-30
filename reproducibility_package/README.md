@@ -50,12 +50,19 @@ Deliberate differences: (i) language-model calls run in threads instead of async
 
 ## Layout
 ```
-reproduce.ipynb         Colab notebook (sections A-F)
-run_all.py              same analyses from the command line
-expected_results.json   numbers reported in the manuscript + tolerances
-swaprepro/              data.py  stats.py  llm.py  analyses.py  report.py  ablation_v2.py
-tests/                  test_selftest.py (15 s smoke test), fidelity_against_original.py (optional QA)
-data/  cache/           inputs (see their READMEs)
+reproduce.ipynb             Colab notebook (sections A-F)
+run_all.py                  same analyses from the command line
+trace.py                    provenance ledger and verification engine
+ledger.json                 machine-readable claim audit ledger (105 claims)
+passport.yaml               reproducibility passport (VERIFIED_PASS)
+expected_results.json       numbers reported in the manuscript + tolerances
+problem.toml                benchmark specification & evaluation config
+reviewer_defense_sweeps.py  sensitivity sweeps & reviewer defense scripts
+swaprepro/                  data.py, stats.py, llm.py, analyses.py, report.py, ablation_v2.py
+tests/                      test_selftest.py (15 s smoke test), fidelity_against_original.py
+data/                       raw contiguous Ethereum block headers (blocks.csv)
+cache/                      shipped LLM answer caches & prompt ablation logs
+results/                    generated figures, primary tables, and ablation reports
 ```
 
 ## Zenodo Archive & Citation

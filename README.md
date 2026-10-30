@@ -16,21 +16,27 @@ This repository provides the complete replication package, Colab execution noteb
 ## Directory Structure
 
 ```text
-├── README.md                   # Main repository guide
+├── .gitignore                  # Git tracking exclusion rules
 ├── LICENSE                     # MIT License
+├── README.md                   # Main repository guide
 ├── code/                       # Primary executed Colab notebook (Supplementary S1)
+│   └── Supplementary_S1_executed_notebook_rebuilt.ipynb
 └── reproducibility_package/    # Self-contained standalone replication package
     ├── README.md               # Replication package guide
+    ├── requirements.txt        # Python dependency specification
+    ├── problem.toml            # Benchmark specification & configuration
     ├── run_all.py              # CLI evaluation and verification runner
     ├── reproduce.ipynb         # Interactive replication notebook
-    ├── requirements.txt        # Python dependency specification
-    ├── cache/                  # Shipped answer caches (ablation & test)
-    ├── data/                   # Ethereum block headers dataset (blocks.csv)
-    ├── results/                # Output figures and CSV tables
-    ├── swaprepro/              # Core replication analysis library
+    ├── reviewer_defense_sweeps.py  # Reviewer defense parametric sweep scripts
     ├── trace.py                # Number-level provenance verifier
-    ├── ledger.json             # 101-claim machine-readable verification ledger
-    └── passport.yaml           # Reproducibility passport (VERIFIED_PASS)
+    ├── ledger.json             # 105-claim machine-readable verification ledger
+    ├── passport.yaml           # Reproducibility passport (VERIFIED_PASS)
+    ├── expected_results.json   # Expected numerical results & tolerances
+    ├── cache/                  # Shipped answer caches (ablation & test)
+    ├── data/                   # Contiguous Ethereum block headers (blocks.csv)
+    ├── results/                # Output figures, tables, and ablation logs
+    ├── swaprepro/              # Core replication analysis library
+    └── tests/                  # Selftests and fidelity verification
 ```
 
 ---
