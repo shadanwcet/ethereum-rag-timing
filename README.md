@@ -41,9 +41,27 @@ This repository provides the complete replication package, Colab execution noteb
 
 ---
 
-## Quick Start (Replication)
+## Quick Start (Replication & Verification Tiers)
 
-All replication commands are run inside `reproducibility_package/`:
+All replication commands are run inside 
+eproducibility_package/, structured into three verification tiers:
+
+`ash
+cd reproducibility_package
+
+# 1. Install dependencies
+pip install -r requirements.txt
+
+# --- Tier 1 (Instant Audit): Verify number-level provenance ledger (zero external dependencies, ~5 seconds) ---
+python trace.py verify --ledger ledger.json --notebook ../code/Supplementary_S1_executed_notebook_rebuilt.ipynb
+
+# --- Tier 2 (Cached Replay): Replay all analyses deterministically using shipped caches (CPU only, ~3 minutes) ---
+python run_all.py --csv data/blocks.csv --mode cache
+
+# --- Tier 3 (Full Pipeline Re-execution): Complete algorithmic execution from raw blocks ---
+python run_all.py --csv data/blocks.csv --no-llm     # Rule-based and kNN baselines (~30 seconds, CPU)
+python run_all.py --csv data/blocks.csv --mode live   # Full live LLM queries via local Ollama qwen2.5:7b (~1 hour)
+`reproducibility_package/`:
 
 ```bash
 cd reproducibility_package
