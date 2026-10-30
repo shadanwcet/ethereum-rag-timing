@@ -1,10 +1,10 @@
 # Replication Package: Matched-Wait Evaluation of Retrieval-Augmented Transaction Timing under Ethereum EIP-1559
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Provenance: Verified](https://img.shields.io/badge/Provenance-VERIFIED__PASS-brightgreen.svg)](passport.yaml)
+[![Provenance: Verified](https://img.shields.io/badge/Provenance-VERIFIED__PASS-brightgreen.svg)](reproducibility_package/passport.yaml)
 [![Python: 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](reproducibility_package/requirements.txt)
 
-This repository provides the complete, deterministic replication package, analysis code, answer caches, and number-level provenance ledger for:
+This repository provides the complete replication package, Colab execution notebook, answer caches, and provenance verification ledger for:
 
 > **Matched-Wait Evaluation of Retrieval-Augmented Transaction Timing under Ethereum EIP-1559: Benchmarking kNN Analogs, Trailing-Rank Heuristics, and 7B Language-Model Planners**  
 > *Mohammad Pasha and Mohammed Ali Shaik* (SR University)  
@@ -12,56 +12,53 @@ This repository provides the complete, deterministic replication package, analys
 
 ---
 
-## Quick Start (Deterministic Replay)
+## Directory Structure
 
-### 1. Verify Claim Provenance (Zero External Dependencies)
-Every number, p-value, and confidence interval in the manuscript results can be verified directly using Python's standard library:
-
-```bash
-# Verify 101 audited manuscript numbers against executed outputs
-python trace.py verify --ledger ledger.json --notebook code/Supplementary_S1_executed_notebook_rebuilt.ipynb
-
-# Regenerate dynamic Reproducibility Passport
-python trace.py passport --ledger ledger.json --out passport.yaml
-```
-
-### 2. Full Replication from Raw Blockchain Data
-To recompute the complete suite (empirical test holdouts, matched-wait deconfounding, and continuous Pareto frontier audits):
-
-```bash
-# Install dependencies
-pip install -r reproducibility_package/requirements.txt
-
-# Run full replication (replays cached LLM answers deterministically)
-python reproducibility_package/run_all.py --csv data/blocks.csv --mode cache
-
-# Rule-based baselines only (CPU only, ~30 seconds)
-python reproducibility_package/run_all.py --csv data/blocks.csv --no-llm
+```text
+├── README.md                   # Main repository guide
+├── LICENSE                     # MIT License
+├── code/                       # Primary executed Colab notebook (Supplementary S1)
+└── reproducibility_package/    # Self-contained standalone replication package
+    ├── README.md               # Replication package guide
+    ├── run_all.py              # CLI evaluation and verification runner
+    ├── reproduce.ipynb         # Interactive replication notebook
+    ├── requirements.txt        # Python dependency specification
+    ├── cache/                  # Shipped answer caches (ablation & test)
+    ├── data/                   # Ethereum block headers dataset (blocks.csv)
+    ├── results/                # Output figures and CSV tables
+    ├── swaprepro/              # Core replication analysis library
+    ├── trace.py                # Number-level provenance verifier
+    ├── ledger.json             # 101-claim machine-readable verification ledger
+    └── passport.yaml           # Reproducibility passport (VERIFIED_PASS)
 ```
 
 ---
 
-## Directory Structure
+## Quick Start (Replication)
 
-```text
-├── README.md               # Main replication guide
-├── LICENSE                 # MIT License
-├── passport.yaml           # Cryptographic claim passport (VERIFIED_PASS, 101 claims)
-├── trace.py                # Dependency-free number-level provenance verifier
-├── ledger.json             # 101-claim machine-readable verification ledger
-├── reconciliation.csv      # Tabular claim reconciliation ledger
-├── code/                   # Primary executed Colab notebook (Supplementary S1)
-├── data/                   # Contiguous Ethereum base-fee dataset (316,800 blocks)
-├── cache/                  # Exact prompt answer caches for deterministic verification
-├── results/                # High-resolution figures and CSV benchmark tables
-└── reproducibility_package/# Standalone Python package and CLI runner
+All replication commands are run inside `reproducibility_package/`:
+
+```bash
+cd reproducibility_package
+
+# 1. Install dependencies
+pip install -r requirements.txt
+
+# 2. Replay all analyses deterministically using shipped caches (CPU only, a few minutes)
+python run_all.py --csv data/blocks.csv --mode cache
+
+# 3. Rule-based baselines only (CPU only, ~30 seconds)
+python run_all.py --csv data/blocks.csv --no-llm
+
+# 4. Verify number-level provenance ledger (zero external dependencies)
+python trace.py verify --ledger ledger.json --notebook ../code/Supplementary_S1_executed_notebook_rebuilt.ipynb
 ```
 
 ---
 
 ## Provenance and Verification
 
-The repository includes a machine-verifiable claim audit ledger ([`ledger.json`](ledger.json)) and reproducibility passport ([`passport.yaml`](passport.yaml)). 
+The repository includes a machine-verifiable claim audit ledger ([`ledger.json`](reproducibility_package/ledger.json)) and reproducibility passport ([`passport.yaml`](reproducibility_package/passport.yaml)):
 
 - **101 Audited Claims**: 40 recomputed deterministically from raw block headers, 61 extracted declaratively from executed Colab notebook outputs.
 - **0 Discrepancies**: 100% of reported values in the primary tables fall within their declared scientific tolerances.
