@@ -82,3 +82,11 @@ ablation.v9_placebo.submit_rate,Table 5,v9_placebo: SUBMIT rate,0.86,0.411538461
 ablation.v9_placebo.shown_coef,Table 5,v9_placebo: coefficient on shown saving,0.0,0.11744192307775793,0.11744192307775793,0.05,DIFFERS
 ablation.v9_placebo.wait_blocks,Table 5,v9_placebo: mean wait (blocks),0.8,15.865384615384615,15.065384615384614,0.5,DIFFERS
 ablation.v9_placebo.vs_heur,Table 5,v9_placebo: minus heuristic at matched wait (pp),-0.28,-4.154129482859823,-3.874129482859823,0.1,DIFFERS
+harness.static.placebo.fee_reduction,Table 2 Panel A,2-day static: placebo fee reduction (%),-0.13,-0.010924373203555524,0.11907562679644448,0.1,DIFFERS
+harness.static.placebo.wait_s,Table 2 Panel A,2-day static: placebo wait (s),296.0,296.26666666666665,0.2666666666666515,4.0,OK
+harness.static.fixed_10.fee_reduction,Table 2 Panel A,2-day static: fixed 10 blocks fee reduction (%),-0.58,-1.0414394960503461,-0.4614394960503462,0.1,DIFFERS
+harness.static.fixed_10.wait_s,Table 2 Panel A,2-day static: fixed 10 blocks wait (s),120.0,120.0,0.0,4.0,OK
+harness.static.no_retrieval.fee_reduction,Table 2 Panel A,2-day static: no retrieval 10% fee reduction (%),2.14,3.5383502222653163,1.3983502222653161,0.1,DIFFERS
+harness.static.no_retrieval.wait_s,Table 2 Panel A,2-day static: no retrieval 10% wait (s),408.0,333.6000000000001,-74.39999999999992,4.0,DIFFERS
+harness.static.oracle.fee_reduction,Table 2 Panel A,2-day static: oracle fee reduction (%),13.41,21.27851157653847,7.86851157653847,0.1,DIFFERS
+harness.static.oracle.wait_s,Table 2 Panel A,2-day static: oracle wait (s),318.0,314.6666666666667,-3.3333333333333144,4.0,OK

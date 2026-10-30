@@ -10,7 +10,7 @@
   "numpy": "2.2.3",
   "pandas": "2.2.3",
   "selftest": true,
-  "seconds": 51.8
+  "seconds": 48.3
  },
  "primary": {
   "table": [
@@ -3499,8 +3499,8 @@
   }
  },
  "reconciliation_summary": {
-  "ok": 9,
-  "differs": 74,
+  "ok": 12,
+  "differs": 79,
   "not_run": 0
  }
 }
