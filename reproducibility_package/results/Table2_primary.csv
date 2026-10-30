@@ -1,0 +1,8 @@
+Arm,Swaps,MeanWait_s,FeeReduction_pct_CI,DiffVsHeuristic_pp,HolmP
+baseline,1600,0,"0.00 [0.00, 0.00]",-,-
+placebo,1600,146,"-0.59 [-1.84, 0.45]",-4.83,0.000
+heuristic,1600,157,"4.25 [2.47, 5.65]",-,-
+knn_retrieval,1600,168,"4.45 [1.96, 6.23]",+0.20,0.671
+oracle,1600,329,"15.56 [14.73, 16.47]",-,-
+llm_no_context,96,114,"-0.79 [-2.79, 1.42]",-5.22,0.063
+llm_retrieval,96,45,"1.33 [-0.34, 3.04]",-3.10,0.156

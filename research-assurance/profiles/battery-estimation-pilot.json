@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "battery-estimation-synthetic-pilot-v1",
+  "title": "Synthetic LFP battery SOC estimator comparison (pilot)",
+  "research_question": "How do candidate SOC estimators compare in the specified synthetic LFP 1RC simulation?",
+  "domain_context": {
+    "chemistry": "LFP",
+    "model": "synthetic 1RC equivalent-circuit model",
+    "operating_regime": "22% capacity fade, isothermal 25 C, simulated dynamic load; external cell validation not performed",
+    "note": "The context reflects the pilot code/spec and is not a literature-validated operating envelope."
+  },
+  "questions": [
+    {
+      "id": "Q-CELL-SCOPE",
+      "question": "What target cell format, chemistry-specific OCV behavior, temperature range, and intended use should define the literature search and model applicability?",
+      "why": "Bounds and parameter ranges from a different cell or operating regime may not apply.",
+      "choices": [
+        "Keep the current synthetic LFP 1RC scope, explicitly exploratory",
+        "Target a named physical LFP cell and operating regime"
+      ],
+      "status": "unresolved"
+    },
+    {
+      "id": "Q-SOC-BOUND",
+      "question": "How should the model handle boundary crossing, and should raw pre-clamp SOC plus cutoff events be recorded for each episode?",
+      "why": "A bounded reported trace alone cannot show whether a numerical clamp altered the physical trajectory.",
+      "choices": [
+        "Reject boundary-crossing episodes and preserve unclipped candidate states",
+        "Model and log a validated physical cutoff that prevents boundary crossing"
+      ],
+      "status": "unresolved"
+    },
+    {
+      "id": "Q-EXTERNAL-DATA",
+      "question": "Which independent physical-cell dataset and evaluation protocol should be used before making empirical battery-performance claims?",
+      "why": "Synthetic replay cannot establish validity on physical cells.",
+      "choices": [
+        "Keep claims limited to simulation until a dataset is selected",
+        "Select a documented public or user-provided cycler dataset"
+      ],
+      "status": "unresolved"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E-PILOT-SIM-CODE",
+      "kind": "source_code",
+      "reference": "scripts/unified_comparative_pipeline.py: simulate_episode",
+      "claim": "Pilot simulation generates SOC trajectories from seeded current profiles and returns the state arrays.",
+      "status": "observed_not_independently_reviewed",
+      "scope": "Internal provenance only; not external validation."
+    },
+    {
+      "id": "E-SOC-DOMAIN",
+      "kind": "provisional_domain_rule",
+      "reference": "SOC convention proposed for this assurance profile; domain-owner confirmation pending",
+      "claim": "The truth trajectory used for an SOC estimation error claim must remain within the declared physical SOC interval [0, 1].",
+      "status": "provisional",
+      "scope": "Executable pilot check; requires confirmation for the chosen SOC definition and operating regime."
+    },
+    {
+      "id": "E-TIME-CONTRACT",
+      "kind": "measurement_contract",
+      "reference": "Frozen experiment spec section 5 and simulator state/measurement time indices",
+      "claim": "An estimator update must compare a state at time t with voltage measured for time t; a transition from t to t+1 uses the input at t.",
+      "status": "provisional",
+      "scope": "Executable index contract; confirm exact estimator timing convention in the frozen protocol."
+    }
+  ],
+  "invariants": [
+    {
+      "id": "SOC-TRUTH-BOUNDS",
+      "type": "range",
+      "target": "trace.soc_true_extrema_by_episode",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "evidence_ids": ["E-SOC-DOMAIN"],
+      "severity": "blocker"
+    },
+    {
+      "id": "SOC-CLAMP-TRACE",
+      "type": "range",
+      "target": "trace.soc_clamp_count",
+      "minimum": 0,
+      "maximum": 0,
+      "evidence_ids": ["E-SOC-DOMAIN"],
+      "severity": "blocker"
+    },
+    {
+      "id": "ESTIMATOR-TIME-ALIGNMENT",
+      "type": "event_alignment",
+      "evidence_ids": ["E-TIME-CONTRACT"],
+      "severity": "blocker"
+    }
+  ],
+  "external_validation": {
+    "status": "not_performed",
+    "datasets": [],
+    "note": "No independent physical-cell dataset has been evaluated in this pilot."
+  }
+}

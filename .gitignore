@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Office temporary lock files
+~$*
+
+# Large distribution zips (hosted on Zenodo)
+*.zip
+
+# Operating System
+.DS_Store
+Thumbs.db
+Desktop.ini

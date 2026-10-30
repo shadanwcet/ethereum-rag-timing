@@ -1,0 +1,40 @@
+# =========================================================================
+# AMICO PROBLEM SPECIFICATION: ETHEREUM EIP-1559 SWAP TIMING
+# Problem: ethereum-swap-timing
+# =========================================================================
+schema_version = "1"
+name = "ethereum-swap-timing"
+title = "Matched-Wait Evaluation of Retrieval-Augmented Transaction Timing under Ethereum EIP-1559"
+domain = "empirical_blockchain_finance"
+lead_author = "Mohammad Pasha"
+institution = "SR University"
+
+[target]
+journal = "PeerJ Computer Science"
+evaluation_protocol = "matched_wait_causal_deconfounding"
+statistical_standard = "cluster_robust_bootstrap_tost"
+
+[dataset]
+source = "Google Cloud BigQuery (bigquery-public-data.crypto_ethereum.blocks)"
+path = "data/blocks.csv"
+rows = 320730
+block_range = [18908895, 19229624]
+analysis_blocks = 316800
+contiguity_ratio = 1.0
+sha256 = "d5184d44032dd4aacadc90ce58c3d3e7603a03e510a1bc98f7477b756aab76a2"
+
+[splits]
+discretization_2day = { W = 14400, LIB = 7, CAL = 6, TEST = 9 }
+discretization_1day = { W = 7200, LIB = 15, CAL = 13, TEST = 16 }
+warmup_buffer_H1 = 300
+terminal_guard_D2 = 52
+arrival_seed = 11
+
+[verification]
+command = "amico run ethereum-swap-timing --verify"
+equivalence_margin_pp = 0.40
+reconciliation_target = "results/reconciliation.csv"
+zero_lookahead_enforced = true
+in_sample_scaler_enforced = true
+ratio_of_means_aggregation = true
+

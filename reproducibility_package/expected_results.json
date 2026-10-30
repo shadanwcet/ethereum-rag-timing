@@ -1,0 +1,642 @@
+{
+  "note": "Values reported in the manuscript draft; tolerance = absolute difference accepted as 'OK'. Exact agreement is expected with the same blocks.csv and cache files; small differences can arise from library versions.",
+  "items": [
+    {
+      "id": "primary.placebo.fee_reduction",
+      "desc": "placebo fee reduction (%)",
+      "expected": -0.59,
+      "tol": 0.1,
+      "table": "Table 2"
+    },
+    {
+      "id": "primary.placebo.wait_s",
+      "desc": "placebo mean wait (s)",
+      "expected": 146,
+      "tol": 4,
+      "table": "Table 2"
+    },
+    {
+      "id": "primary.heuristic.fee_reduction",
+      "desc": "heuristic fee reduction (%)",
+      "expected": 4.25,
+      "tol": 0.1,
+      "table": "Table 2"
+    },
+    {
+      "id": "primary.heuristic.wait_s",
+      "desc": "heuristic mean wait (s)",
+      "expected": 157,
+      "tol": 4,
+      "table": "Table 2"
+    },
+    {
+      "id": "primary.knn_retrieval.fee_reduction",
+      "desc": "knn_retrieval fee reduction (%)",
+      "expected": 4.45,
+      "tol": 0.1,
+      "table": "Table 2"
+    },
+    {
+      "id": "primary.knn_retrieval.wait_s",
+      "desc": "knn_retrieval mean wait (s)",
+      "expected": 168,
+      "tol": 4,
+      "table": "Table 2"
+    },
+    {
+      "id": "primary.oracle.fee_reduction",
+      "desc": "oracle fee reduction (%)",
+      "expected": 15.56,
+      "tol": 0.1,
+      "table": "Table 2"
+    },
+    {
+      "id": "primary.oracle.wait_s",
+      "desc": "oracle mean wait (s)",
+      "expected": 329,
+      "tol": 4,
+      "table": "Table 2"
+    },
+    {
+      "id": "primary.llm_no_context.fee_reduction",
+      "desc": "llm_no_context fee reduction (%)",
+      "expected": -0.98,
+      "tol": 0.1,
+      "table": "Table 2"
+    },
+    {
+      "id": "primary.llm_no_context.wait_s",
+      "desc": "llm_no_context mean wait (s)",
+      "expected": 111,
+      "tol": 4,
+      "table": "Table 2"
+    },
+    {
+      "id": "primary.llm_retrieval.fee_reduction",
+      "desc": "llm_retrieval fee reduction (%)",
+      "expected": 0.48,
+      "tol": 0.1,
+      "table": "Table 2"
+    },
+    {
+      "id": "primary.llm_retrieval.wait_s",
+      "desc": "llm_retrieval mean wait (s)",
+      "expected": 35,
+      "tol": 4,
+      "table": "Table 2"
+    },
+    {
+      "id": "primary.knn_retrieval.holm_p",
+      "desc": "kNN vs heuristic, Holm p",
+      "expected": 0.671,
+      "tol": 0.02,
+      "table": "Table 2"
+    },
+    {
+      "id": "primary.llm_no_context.holm_p",
+      "desc": "LLM no-context vs heuristic, Holm p",
+      "expected": 0.033,
+      "tol": 0.01,
+      "table": "Table 2"
+    },
+    {
+      "id": "primary.llm_retrieval.holm_p",
+      "desc": "LLM retrieval vs heuristic, Holm p",
+      "expected": 0.042,
+      "tol": 0.01,
+      "table": "Table 2"
+    },
+    {
+      "id": "primary.matched.heuristic.diff",
+      "desc": "LLM-retrieval minus matched heuristic (pp)",
+      "expected": -1.05,
+      "tol": 0.1,
+      "table": "Table 2 note"
+    },
+    {
+      "id": "primary.matched.kNN.diff",
+      "desc": "LLM-retrieval minus matched kNN (pp)",
+      "expected": -1.27,
+      "tol": 0.1,
+      "table": "Table 2 note"
+    },
+    {
+      "id": "harness.static.heuristic.fee_reduction",
+      "desc": "2-day static: heuristic (%)",
+      "expected": 4.61,
+      "tol": 0.1,
+      "table": "Table 3"
+    },
+    {
+      "id": "harness.static.retrieval.fee_reduction",
+      "desc": "2-day static: retrieval (%)",
+      "expected": 3.11,
+      "tol": 0.1,
+      "table": "Table 3"
+    },
+    {
+      "id": "harness.static.delta",
+      "desc": "2-day static: retrieval minus heuristic (pp)",
+      "expected": -1.5,
+      "tol": 0.1,
+      "table": "Table 3"
+    },
+    {
+      "id": "harness.static.delta_lo",
+      "desc": "2-day static: CI low",
+      "expected": -2.69,
+      "tol": 0.15,
+      "table": "Table 3"
+    },
+    {
+      "id": "harness.static.delta_hi",
+      "desc": "2-day static: CI high",
+      "expected": -0.29,
+      "tol": 0.15,
+      "table": "Table 3"
+    },
+    {
+      "id": "harness.static.heuristic.wait_s",
+      "desc": "2-day static: heuristic wait (s)",
+      "expected": 165,
+      "tol": 4,
+      "table": "Table 3"
+    },
+    {
+      "id": "harness.static.retrieval.wait_s",
+      "desc": "2-day static: retrieval wait (s)",
+      "expected": 175,
+      "tol": 4,
+      "table": "Table 3"
+    },
+    {
+      "id": "harness.static.freshness_lag",
+      "desc": "2-day static: mean freshness lag (blocks)",
+      "expected": 161672,
+      "tol": 2000,
+      "table": "Methods"
+    },
+    {
+      "id": "harness.rolling.retrieval.fee_reduction",
+      "desc": "2-day rolling: retrieval (%)",
+      "expected": 5.25,
+      "tol": 0.1,
+      "table": "Table 3"
+    },
+    {
+      "id": "harness.rolling.retrieval.wait_s",
+      "desc": "2-day rolling: retrieval wait (s)",
+      "expected": 261,
+      "tol": 4,
+      "table": "Table 3"
+    },
+    {
+      "id": "harness.rolling.delta",
+      "desc": "2-day rolling: retrieval minus heuristic (pp)",
+      "expected": 0.63,
+      "tol": 0.1,
+      "table": "Table 3"
+    },
+    {
+      "id": "harness.rolling.delta_lo",
+      "desc": "2-day rolling: CI low",
+      "expected": -1.24,
+      "tol": 0.15,
+      "table": "Table 3"
+    },
+    {
+      "id": "harness.rolling.delta_hi",
+      "desc": "2-day rolling: CI high",
+      "expected": 2.38,
+      "tol": 0.15,
+      "table": "Table 3"
+    },
+    {
+      "id": "harness.rolling.matchedA.diff",
+      "desc": "rolling matched A (pp)",
+      "expected": 0.09,
+      "tol": 0.1,
+      "table": "Table 3"
+    },
+    {
+      "id": "harness.rolling.matchedB.diff",
+      "desc": "rolling matched B (pp)",
+      "expected": 0.77,
+      "tol": 0.1,
+      "table": "Table 3"
+    },
+    {
+      "id": "frontier.initial.mean_gap",
+      "desc": "frontier audit, +/-1.0 pp: mean gap",
+      "expected": -0.3,
+      "tol": 0.05,
+      "table": "Table 3"
+    },
+    {
+      "id": "frontier.initial.lo",
+      "desc": "frontier audit, +/-1.0 pp: CI low",
+      "expected": -1.02,
+      "tol": 0.05,
+      "table": "Table 3"
+    },
+    {
+      "id": "frontier.initial.hi",
+      "desc": "frontier audit, +/-1.0 pp: CI high",
+      "expected": 0.21,
+      "tol": 0.05,
+      "table": "Table 3"
+    },
+    {
+      "id": "frontier.hardened.mean_gap",
+      "desc": "frontier audit, +/-0.40 pp: mean gap",
+      "expected": -0.14,
+      "tol": 0.05,
+      "table": "Table 3"
+    },
+    {
+      "id": "frontier.hardened.lo",
+      "desc": "frontier audit, +/-0.40 pp: CI low",
+      "expected": -0.7,
+      "tol": 0.05,
+      "table": "Table 3"
+    },
+    {
+      "id": "frontier.hardened.hi",
+      "desc": "frontier audit, +/-0.40 pp: CI high",
+      "expected": 0.46,
+      "tol": 0.05,
+      "table": "Table 3"
+    },
+    {
+      "id": "diag.static.low.r",
+      "desc": "static library r, rank tercile low",
+      "expected": 0.265,
+      "tol": 0.01,
+      "table": "Table 4"
+    },
+    {
+      "id": "diag.rolling.low.r",
+      "desc": "rolling look-back r, rank tercile low",
+      "expected": 0.223,
+      "tol": 0.01,
+      "table": "Table 4"
+    },
+    {
+      "id": "diag.static.mid.r",
+      "desc": "static library r, rank tercile mid",
+      "expected": 0.165,
+      "tol": 0.01,
+      "table": "Table 4"
+    },
+    {
+      "id": "diag.rolling.mid.r",
+      "desc": "rolling look-back r, rank tercile mid",
+      "expected": 0.243,
+      "tol": 0.01,
+      "table": "Table 4"
+    },
+    {
+      "id": "diag.static.high.r",
+      "desc": "static library r, rank tercile high",
+      "expected": 0.242,
+      "tol": 0.01,
+      "table": "Table 4"
+    },
+    {
+      "id": "diag.rolling.high.r",
+      "desc": "rolling look-back r, rank tercile high",
+      "expected": 0.126,
+      "tol": 0.01,
+      "table": "Table 4"
+    },
+    {
+      "id": "diag.static.ALL.r",
+      "desc": "static library r, rank tercile ALL",
+      "expected": 0.227,
+      "tol": 0.01,
+      "table": "Table 4"
+    },
+    {
+      "id": "diag.rolling.ALL.r",
+      "desc": "rolling look-back r, rank tercile ALL",
+      "expected": 0.177,
+      "tol": 0.01,
+      "table": "Table 4"
+    },
+    {
+      "id": "diag.stratum.low/high/far.r",
+      "desc": "exploratory stratum low rank/high vol/far (r)",
+      "expected": 0.406,
+      "tol": 0.02,
+      "table": "Table 4 note"
+    },
+    {
+      "id": "diag.stratum.low/high/far.n",
+      "desc": "exploratory stratum n",
+      "expected": 105,
+      "tol": 3,
+      "table": "Table 4 note"
+    },
+    {
+      "id": "ablation.v2_paper_baseline.coef",
+      "desc": "v2_paper_baseline: coefficient on saving",
+      "expected": -0.19,
+      "tol": 0.05,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v2_paper_baseline.coef_lo",
+      "desc": "v2_paper_baseline: CI low",
+      "expected": -0.39,
+      "tol": 0.08,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v2_paper_baseline.coef_hi",
+      "desc": "v2_paper_baseline: CI high",
+      "expected": 0.01,
+      "tol": 0.08,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v2_paper_baseline.submit_rate",
+      "desc": "v2_paper_baseline: SUBMIT rate",
+      "expected": 0.69,
+      "tol": 0.03,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v2_paper_baseline.shown_coef",
+      "desc": "v2_paper_baseline: coefficient on shown saving",
+      "expected": -0.12,
+      "tol": 0.05,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v2_paper_baseline.wait_blocks",
+      "desc": "v2_paper_baseline: mean wait (blocks)",
+      "expected": 2.4,
+      "tol": 0.5,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v2_paper_baseline.vs_heur",
+      "desc": "v2_paper_baseline: minus heuristic at matched wait (pp)",
+      "expected": 0.4,
+      "tol": 0.1,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v3_positive_saving.coef",
+      "desc": "v3_positive_saving: coefficient on saving",
+      "expected": -0.76,
+      "tol": 0.05,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v3_positive_saving.coef_lo",
+      "desc": "v3_positive_saving: CI low",
+      "expected": -1.03,
+      "tol": 0.08,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v3_positive_saving.coef_hi",
+      "desc": "v3_positive_saving: CI high",
+      "expected": -0.44,
+      "tol": 0.08,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v3_positive_saving.submit_rate",
+      "desc": "v3_positive_saving: SUBMIT rate",
+      "expected": 0.87,
+      "tol": 0.03,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v3_positive_saving.shown_coef",
+      "desc": "v3_positive_saving: coefficient on shown saving",
+      "expected": -0.66,
+      "tol": 0.05,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v3_positive_saving.wait_blocks",
+      "desc": "v3_positive_saving: mean wait (blocks)",
+      "expected": 0.6,
+      "tol": 0.5,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v3_positive_saving.vs_heur",
+      "desc": "v3_positive_saving: minus heuristic at matched wait (pp)",
+      "expected": 0.01,
+      "tol": 0.1,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v6_reorder.coef",
+      "desc": "v6_reorder: coefficient on saving",
+      "expected": 0.05,
+      "tol": 0.05,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v6_reorder.coef_lo",
+      "desc": "v6_reorder: CI low",
+      "expected": -0.21,
+      "tol": 0.08,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v6_reorder.coef_hi",
+      "desc": "v6_reorder: CI high",
+      "expected": 0.33,
+      "tol": 0.08,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v6_reorder.submit_rate",
+      "desc": "v6_reorder: SUBMIT rate",
+      "expected": 0.86,
+      "tol": 0.03,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v6_reorder.shown_coef",
+      "desc": "v6_reorder: coefficient on shown saving",
+      "expected": 0.11,
+      "tol": 0.05,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v6_reorder.wait_blocks",
+      "desc": "v6_reorder: mean wait (blocks)",
+      "expected": 1.3,
+      "tol": 0.5,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v6_reorder.vs_heur",
+      "desc": "v6_reorder: minus heuristic at matched wait (pp)",
+      "expected": -0.7,
+      "tol": 0.1,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v8_all_fixes.coef",
+      "desc": "v8_all_fixes: coefficient on saving",
+      "expected": -0.21,
+      "tol": 0.05,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v8_all_fixes.coef_lo",
+      "desc": "v8_all_fixes: CI low",
+      "expected": -0.7,
+      "tol": 0.08,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v8_all_fixes.coef_hi",
+      "desc": "v8_all_fixes: CI high",
+      "expected": 0.38,
+      "tol": 0.08,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v8_all_fixes.submit_rate",
+      "desc": "v8_all_fixes: SUBMIT rate",
+      "expected": 0.07,
+      "tol": 0.03,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v8_all_fixes.shown_coef",
+      "desc": "v8_all_fixes: coefficient on shown saving",
+      "expected": -0.02,
+      "tol": 0.05,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v8_all_fixes.wait_blocks",
+      "desc": "v8_all_fixes: mean wait (blocks)",
+      "expected": 36.2,
+      "tol": 0.5,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v8_all_fixes.vs_heur",
+      "desc": "v8_all_fixes: minus heuristic at matched wait (pp)",
+      "expected": -3.14,
+      "tol": 0.1,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v9_placebo.coef",
+      "desc": "v9_placebo: coefficient on saving",
+      "expected": -0.11,
+      "tol": 0.05,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v9_placebo.coef_lo",
+      "desc": "v9_placebo: CI low",
+      "expected": -0.39,
+      "tol": 0.08,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v9_placebo.coef_hi",
+      "desc": "v9_placebo: CI high",
+      "expected": 0.22,
+      "tol": 0.08,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v9_placebo.submit_rate",
+      "desc": "v9_placebo: SUBMIT rate",
+      "expected": 0.86,
+      "tol": 0.03,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v9_placebo.shown_coef",
+      "desc": "v9_placebo: coefficient on shown saving",
+      "expected": 0.0,
+      "tol": 0.05,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v9_placebo.wait_blocks",
+      "desc": "v9_placebo: mean wait (blocks)",
+      "expected": 0.8,
+      "tol": 0.5,
+      "table": "Table 5"
+    },
+    {
+      "id": "ablation.v9_placebo.vs_heur",
+      "desc": "v9_placebo: minus heuristic at matched wait (pp)",
+      "expected": -0.28,
+      "tol": 0.1,
+      "table": "Table 5"
+    },
+    {
+      "id": "harness.static.placebo.fee_reduction",
+      "desc": "2-day static: placebo fee reduction (%)",
+      "expected": -0.13,
+      "tol": 0.1,
+      "table": "Table 2 Panel A"
+    },
+    {
+      "id": "harness.static.placebo.wait_s",
+      "desc": "2-day static: placebo wait (s)",
+      "expected": 296.0,
+      "tol": 4.0,
+      "table": "Table 2 Panel A"
+    },
+    {
+      "id": "harness.static.fixed_10.fee_reduction",
+      "desc": "2-day static: fixed 10 blocks fee reduction (%)",
+      "expected": -0.58,
+      "tol": 0.1,
+      "table": "Table 2 Panel A"
+    },
+    {
+      "id": "harness.static.fixed_10.wait_s",
+      "desc": "2-day static: fixed 10 blocks wait (s)",
+      "expected": 120.0,
+      "tol": 4.0,
+      "table": "Table 2 Panel A"
+    },
+    {
+      "id": "harness.static.no_retrieval.fee_reduction",
+      "desc": "2-day static: no retrieval 10% fee reduction (%)",
+      "expected": 2.14,
+      "tol": 0.1,
+      "table": "Table 2 Panel A"
+    },
+    {
+      "id": "harness.static.no_retrieval.wait_s",
+      "desc": "2-day static: no retrieval 10% wait (s)",
+      "expected": 408.0,
+      "tol": 4.0,
+      "table": "Table 2 Panel A"
+    },
+    {
+      "id": "harness.static.oracle.fee_reduction",
+      "desc": "2-day static: oracle fee reduction (%)",
+      "expected": 13.41,
+      "tol": 0.1,
+      "table": "Table 2 Panel A"
+    },
+    {
+      "id": "harness.static.oracle.wait_s",
+      "desc": "2-day static: oracle wait (s)",
+      "expected": 318.0,
+      "tol": 4.0,
+      "table": "Table 2 Panel A"
+    }
+  ]
+}

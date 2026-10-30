@@ -1,0 +1,8 @@
+Configuration,Windows,"kNN minus heuristic, pp [95% CI]","Mean wait, kNN vs heuristic"
+"1-day windows, static library (primary)",16,"+0.20 [-0.84, +0.96]; Holm p = 0.671",168 s vs 157 s
+"2-day windows, static library",9,"-1.50 [-2.69, -0.29]",175 s vs 165 s
+"2-day windows, rolling 5,000-block look-back, unmatched",9,"+0.63 [-1.24, +2.38]",261 s vs 165 s
+"Same, heuristic matched to retrieval's wait",9,"+0.09 [-2.12, +2.54]",261 s vs 264 s
+"Same, retrieval matched to heuristic's wait (match failed: not interpretable)",9,"+0.77 [-1.08, +2.56]",281 s vs 165 s
+"Frontier audit, 60-400 s, margin +/-1.00 pp (static library)",9,"-0.30 [-1.02, +0.21]; inconclusive (CI spans 0 and exceeds +/-1.00 pp)",matched along frontier
+"Frontier audit, 60-400 s, margin +/-0.40 pp (static library)",9,"-0.14 [-0.70, +0.46]; inconclusive (CI spans 0 and exceeds +/-0.40 pp)",matched along frontier

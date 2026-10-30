@@ -1,0 +1,84 @@
+id,manuscript,description,reported,regenerated,difference,tolerance,status
+primary.placebo.fee_reduction,Table 2,placebo fee reduction (%),-0.59,-0.5851305180608065,0.004869481939193454,0.1,OK
+primary.placebo.wait_s,Table 2,placebo mean wait (s),146.0,146.055,0.05500000000000682,4.0,OK
+primary.heuristic.fee_reduction,Table 2,heuristic fee reduction (%),4.25,4.245417743109571,-0.004582256890429015,0.1,OK
+primary.heuristic.wait_s,Table 2,heuristic mean wait (s),157.0,157.02,0.020000000000010232,4.0,OK
+primary.knn_retrieval.fee_reduction,Table 2,knn_retrieval fee reduction (%),4.45,4.450132226637243,0.00013222663724299366,0.1,OK
+primary.knn_retrieval.wait_s,Table 2,knn_retrieval mean wait (s),168.0,168.09,0.09000000000000341,4.0,OK
+primary.oracle.fee_reduction,Table 2,oracle fee reduction (%),15.56,15.563292323143425,0.00329232314342498,0.1,OK
+primary.oracle.wait_s,Table 2,oracle mean wait (s),329.0,328.8225,-0.1775000000000091,4.0,OK
+primary.llm_no_context.fee_reduction,Table 2,llm_no_context fee reduction (%),-0.98,,,0.1,not run
+primary.llm_no_context.wait_s,Table 2,llm_no_context mean wait (s),111.0,,,4.0,not run
+primary.llm_retrieval.fee_reduction,Table 2,llm_retrieval fee reduction (%),0.48,,,0.1,not run
+primary.llm_retrieval.wait_s,Table 2,llm_retrieval mean wait (s),35.0,,,4.0,not run
+primary.knn_retrieval.holm_p,Table 2,"kNN vs heuristic, Holm p",0.671,0.6708245469753169,-0.0001754530246831365,0.02,OK
+primary.llm_no_context.holm_p,Table 2,"LLM no-context vs heuristic, Holm p",0.033,,,0.01,not run
+primary.llm_retrieval.holm_p,Table 2,"LLM retrieval vs heuristic, Holm p",0.042,,,0.01,not run
+primary.matched.heuristic.diff,Table 2 note,LLM-retrieval minus matched heuristic (pp),-1.05,,,0.1,not run
+primary.matched.kNN.diff,Table 2 note,LLM-retrieval minus matched kNN (pp),-1.27,,,0.1,not run
+harness.static.heuristic.fee_reduction,Table 3,2-day static: heuristic (%),4.61,4.611371471775352,0.0013714717753519068,0.1,OK
+harness.static.retrieval.fee_reduction,Table 3,2-day static: retrieval (%),3.11,3.1120728265745674,0.0020728265745675323,0.1,OK
+harness.static.delta,Table 3,2-day static: retrieval minus heuristic (pp),-1.5,-1.4992986452007848,0.0007013547992151814,0.1,OK
+harness.static.delta_lo,Table 3,2-day static: CI low,-2.69,-2.691849270202522,-0.0018492702025221242,0.15,OK
+harness.static.delta_hi,Table 3,2-day static: CI high,-0.29,-0.29002589218148606,-2.589218148607575e-05,0.15,OK
+harness.static.heuristic.wait_s,Table 3,2-day static: heuristic wait (s),165.0,165.33333333333334,0.3333333333333428,4.0,OK
+harness.static.retrieval.wait_s,Table 3,2-day static: retrieval wait (s),175.0,174.53333333333333,-0.46666666666666856,4.0,OK
+harness.static.freshness_lag,Methods,2-day static: mean freshness lag (blocks),161672.0,161672.17555555556,0.17555555555736646,2000.0,OK
+harness.rolling.retrieval.fee_reduction,Table 3,2-day rolling: retrieval (%),5.25,5.245716054526024,-0.004283945473975592,0.1,OK
+harness.rolling.retrieval.wait_s,Table 3,2-day rolling: retrieval wait (s),261.0,261.0666666666667,0.06666666666671972,4.0,OK
+harness.rolling.delta,Table 3,2-day rolling: retrieval minus heuristic (pp),0.63,0.6343445827506728,0.004344582750672843,0.1,OK
+harness.rolling.delta_lo,Table 3,2-day rolling: CI low,-1.24,-1.2366276107574095,0.0033723892425905344,0.15,OK
+harness.rolling.delta_hi,Table 3,2-day rolling: CI high,2.38,2.384433760498086,0.00443376049808597,0.15,OK
+harness.rolling.matchedA.diff,Table 3,rolling matched A (pp),0.09,0.09486710025439343,0.004867100254393436,0.1,OK
+harness.rolling.matchedB.diff,Table 3,rolling matched B (pp),0.77,0.7732014772434732,0.003201477243473194,0.1,OK
+frontier.initial.mean_gap,Table 3,"frontier audit, +/-1.0 pp: mean gap",-0.3,-0.29774668550446515,0.0022533144955348416,0.05,OK
+frontier.initial.lo,Table 3,"frontier audit, +/-1.0 pp: CI low",-1.02,-1.0164148501885735,0.0035851498114265468,0.05,OK
+frontier.initial.hi,Table 3,"frontier audit, +/-1.0 pp: CI high",0.21,0.2102484986070229,0.0002484986070229178,0.05,OK
+frontier.hardened.mean_gap,Table 3,"frontier audit, +/-0.40 pp: mean gap",-0.14,-0.14353388248549628,-0.0035338824854962703,0.05,OK
+frontier.hardened.lo,Table 3,"frontier audit, +/-0.40 pp: CI low",-0.7,-0.7009206670196939,-0.0009206670196939548,0.05,OK
+frontier.hardened.hi,Table 3,"frontier audit, +/-0.40 pp: CI high",0.46,0.46185975460209056,0.0018597546020905353,0.05,OK
+diag.static.low.r,Table 4,"static library r, rank tercile low",0.265,0.264603220248026,-0.00039677975197399684,0.01,OK
+diag.rolling.low.r,Table 4,"rolling look-back r, rank tercile low",0.223,0.22300304666729232,3.046667292311289e-06,0.01,OK
+diag.static.mid.r,Table 4,"static library r, rank tercile mid",0.165,0.16475405776700053,-0.0002459422329994798,0.01,OK
+diag.rolling.mid.r,Table 4,"rolling look-back r, rank tercile mid",0.243,0.24298248670109682,-1.7513298903176766e-05,0.01,OK
+diag.static.high.r,Table 4,"static library r, rank tercile high",0.242,0.24211575156087958,0.00011575156087959004,0.01,OK
+diag.rolling.high.r,Table 4,"rolling look-back r, rank tercile high",0.126,0.12571007340476922,-0.00028992659523077724,0.01,OK
+diag.static.ALL.r,Table 4,"static library r, rank tercile ALL",0.227,0.22658449878093667,-0.0004155012190633356,0.01,OK
+diag.rolling.ALL.r,Table 4,"rolling look-back r, rank tercile ALL",0.177,0.17726916909834528,0.0002691690983452899,0.01,OK
+diag.stratum.low/high/far.r,Table 4 note,exploratory stratum low rank/high vol/far (r),0.406,0.4060534089562159,5.340895621586128e-05,0.02,OK
+diag.stratum.low/high/far.n,Table 4 note,exploratory stratum n,105.0,105.0,0.0,3.0,OK
+ablation.v2_paper_baseline.coef,Table 5,v2_paper_baseline: coefficient on saving,-0.19,,,0.05,not run
+ablation.v2_paper_baseline.coef_lo,Table 5,v2_paper_baseline: CI low,-0.39,,,0.08,not run
+ablation.v2_paper_baseline.coef_hi,Table 5,v2_paper_baseline: CI high,0.01,,,0.08,not run
+ablation.v2_paper_baseline.submit_rate,Table 5,v2_paper_baseline: SUBMIT rate,0.69,,,0.03,not run
+ablation.v2_paper_baseline.shown_coef,Table 5,v2_paper_baseline: coefficient on shown saving,-0.12,,,0.05,not run
+ablation.v2_paper_baseline.wait_blocks,Table 5,v2_paper_baseline: mean wait (blocks),2.4,,,0.5,not run
+ablation.v2_paper_baseline.vs_heur,Table 5,v2_paper_baseline: minus heuristic at matched wait (pp),0.4,,,0.1,not run
+ablation.v3_positive_saving.coef,Table 5,v3_positive_saving: coefficient on saving,-0.76,,,0.05,not run
+ablation.v3_positive_saving.coef_lo,Table 5,v3_positive_saving: CI low,-1.03,,,0.08,not run
+ablation.v3_positive_saving.coef_hi,Table 5,v3_positive_saving: CI high,-0.44,,,0.08,not run
+ablation.v3_positive_saving.submit_rate,Table 5,v3_positive_saving: SUBMIT rate,0.87,,,0.03,not run
+ablation.v3_positive_saving.shown_coef,Table 5,v3_positive_saving: coefficient on shown saving,-0.66,,,0.05,not run
+ablation.v3_positive_saving.wait_blocks,Table 5,v3_positive_saving: mean wait (blocks),0.6,,,0.5,not run
+ablation.v3_positive_saving.vs_heur,Table 5,v3_positive_saving: minus heuristic at matched wait (pp),0.01,,,0.1,not run
+ablation.v6_reorder.coef,Table 5,v6_reorder: coefficient on saving,0.05,,,0.05,not run
+ablation.v6_reorder.coef_lo,Table 5,v6_reorder: CI low,-0.21,,,0.08,not run
+ablation.v6_reorder.coef_hi,Table 5,v6_reorder: CI high,0.33,,,0.08,not run
+ablation.v6_reorder.submit_rate,Table 5,v6_reorder: SUBMIT rate,0.86,,,0.03,not run
+ablation.v6_reorder.shown_coef,Table 5,v6_reorder: coefficient on shown saving,0.11,,,0.05,not run
+ablation.v6_reorder.wait_blocks,Table 5,v6_reorder: mean wait (blocks),1.3,,,0.5,not run
+ablation.v6_reorder.vs_heur,Table 5,v6_reorder: minus heuristic at matched wait (pp),-0.7,,,0.1,not run
+ablation.v8_all_fixes.coef,Table 5,v8_all_fixes: coefficient on saving,-0.21,,,0.05,not run
+ablation.v8_all_fixes.coef_lo,Table 5,v8_all_fixes: CI low,-0.7,,,0.08,not run
+ablation.v8_all_fixes.coef_hi,Table 5,v8_all_fixes: CI high,0.38,,,0.08,not run
+ablation.v8_all_fixes.submit_rate,Table 5,v8_all_fixes: SUBMIT rate,0.07,,,0.03,not run
+ablation.v8_all_fixes.shown_coef,Table 5,v8_all_fixes: coefficient on shown saving,-0.02,,,0.05,not run
+ablation.v8_all_fixes.wait_blocks,Table 5,v8_all_fixes: mean wait (blocks),36.2,,,0.5,not run
+ablation.v8_all_fixes.vs_heur,Table 5,v8_all_fixes: minus heuristic at matched wait (pp),-3.14,,,0.1,not run
+ablation.v9_placebo.coef,Table 5,v9_placebo: coefficient on saving,-0.11,,,0.05,not run
+ablation.v9_placebo.coef_lo,Table 5,v9_placebo: CI low,-0.39,,,0.08,not run
+ablation.v9_placebo.coef_hi,Table 5,v9_placebo: CI high,0.22,,,0.08,not run
+ablation.v9_placebo.submit_rate,Table 5,v9_placebo: SUBMIT rate,0.86,,,0.03,not run
+ablation.v9_placebo.shown_coef,Table 5,v9_placebo: coefficient on shown saving,0.0,,,0.05,not run
+ablation.v9_placebo.wait_blocks,Table 5,v9_placebo: mean wait (blocks),0.8,,,0.5,not run
+ablation.v9_placebo.vs_heur,Table 5,v9_placebo: minus heuristic at matched wait (pp),-0.28,,,0.1,not run
