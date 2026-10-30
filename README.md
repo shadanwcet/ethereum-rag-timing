@@ -7,7 +7,7 @@
 
 This repository provides the complete replication package, Colab execution notebook, answer caches, and provenance verification ledger for:
 
-> **Matched-Wait Evaluation of Retrieval-Augmented Transaction Timing under Ethereum EIP-1559: Benchmarking kNN Analogs, Trailing-Rank Heuristics, and 7B Language-Model Planners**  
+> **Matched-Wait evaluation of retrieval-augmented transaction timing under Ethereum EIP-1559: Benchmarking kNN Analogs, Trailing-Rank Heuristics, and 7B Language-Model Planners**  
 > *Mohammad Pasha and Mohammed Ali Shaik* (SR University)  
 > Target Venue: *PeerJ Computer Science*
 
