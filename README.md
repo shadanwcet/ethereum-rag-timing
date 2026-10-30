@@ -60,6 +60,7 @@ python run_all.py --csv data/blocks.csv --mode cache
 
 ## --- Tier 3 (Full Pipeline Re-execution): Complete algorithmic execution from raw blocks ---
 python run_all.py --csv data/blocks.csv --no-llm     # Rule-based and kNN baselines (~30 seconds, CPU)
+
 python run_all.py --csv data/blocks.csv --mode live   # Full live LLM queries via local Ollama qwen2.5:7b (~1 hour)
 `reproducibility_package/`:
 
