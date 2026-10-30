@@ -1,6 +1,7 @@
 # Reproducibility package (Supplemental Code S1)
 
-Regenerates every table and figure of **"Retrieving similar past market states to time Ethereum swaps: a matched-wait replay study with a small language-model arm"** from `blocks.csv` and, for the language-model rows, from shipped answer caches.
+Regenerates every table and figure of **"Matched-Wait Evaluation of Retrieval-Augmented Transaction Timing under Ethereum EIP-1559: Benchmarking kNN Analogs, Trailing-Rank Heuristics, and 7B Language-Model Planners
+"** from `blocks.csv` and, for the language-model rows, from shipped answer caches.
 
 ## Quick start
 
