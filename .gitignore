@@ -14,6 +14,9 @@ venv/
 # Office temporary lock files
 ~$*
 
+# Standalone Research Assurance Framework (separate project)
+research-assurance/
+
 # Large distribution zips (hosted on Zenodo)
 *.zip
 
