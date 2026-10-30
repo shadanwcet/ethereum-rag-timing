@@ -2,7 +2,7 @@
 schema_version: "1.0"
 verification_status: VERIFIED_PASS
 discrepancies: 0
-total_audited_claims: 101
+total_audited_claims: 105
 provenance:
   dataset: "Ethereum Mainnet Block Headers"
   sha256: "d5184d44032dd4aacadc90ce58c3d3e7603a03e510a1bc98f7477b756aab76a2"
@@ -14,6 +14,6 @@ invariants:
   scale_invariance: "ENFORCED"
   boundary_seam_guards: "ENFORCED"
 audit_summary:
-  regenerated_tier: 40
-  recorded_output_tier: 61
+  regenerated_tier: 72
+  recorded_output_tier: 33
   unsourced_tier: 0

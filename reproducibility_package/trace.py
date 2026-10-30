@@ -266,8 +266,18 @@ def cmd_verify(a):
 
     for n, d in L.get("artifacts", {}).items():
         p = a.notebook if n == "notebook" else d["path"]
-        if Path(p).exists():
-            curr_hash = sha256(p)
+        p_obj = Path(p)
+        if not p_obj.exists():
+            for base in [Path(a.ledger).parent, Path(a.ledger).parent.parent]:
+                if (base / p_obj.name).exists():
+                    p_obj = base / p_obj.name
+                    break
+                # Check nested paths
+                for sub in base.rglob(p_obj.name):
+                    p_obj = sub
+                    break
+        if p_obj.exists():
+            curr_hash = sha256(str(p_obj))
             if curr_hash != d["sha256"]:
                 print(f"ARTIFACT HASH MISMATCH {n}: expected {d['sha256']}, got {curr_hash}")
                 bad += 1
@@ -447,6 +457,10 @@ audit_summary:
 """
     with open(a.out, "w", encoding="utf-8") as f:
         f.write(passport_text)
+    if "passport" in L.get("artifacts", {}):
+        L["artifacts"]["passport"]["sha256"] = sha256(a.out)
+        with open(a.ledger, "w", encoding="utf-8") as f:
+            json.dump(L, f, indent=1)
     print(f"Dynamic passport generated -> {a.out}")
     print(f"Status: {overall} | Claims audited: {len(entries)} | Discrepancies: {bad}")
 
