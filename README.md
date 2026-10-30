@@ -1,5 +1,6 @@
 # Replication Package: Matched-Wait Evaluation of Retrieval-Augmented Transaction Timing under Ethereum EIP-1559
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23799506.svg)](https://doi.org/10.5281/zenodo.23799506)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Provenance: Verified](https://img.shields.io/badge/Provenance-VERIFIED__PASS-brightgreen.svg)](reproducibility_package/passport.yaml)
 [![Python: 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](reproducibility_package/requirements.txt)
@@ -60,7 +61,7 @@ python trace.py verify --ledger ledger.json --notebook ../code/Supplementary_S1_
 
 The repository includes a machine-verifiable claim audit ledger ([`ledger.json`](reproducibility_package/ledger.json)) and reproducibility passport ([`passport.yaml`](reproducibility_package/passport.yaml)):
 
-- **101 Audited Claims**: 40 recomputed deterministically from raw block headers, 61 extracted declaratively from executed Colab notebook outputs.
+- **105 Audited Claims**: 72 recomputed deterministically from raw block headers, 33 extracted declaratively from executed Colab notebook outputs.
 - **0 Discrepancies**: 100% of reported values in the primary tables fall within their declared scientific tolerances.
 - **Invariants Enforced**: Causal zero-lookahead, in-sample scaler isolation, scale invariance, and boundary seam guards.
 

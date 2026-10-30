@@ -58,10 +58,9 @@ tests/                  test_selftest.py (15 s smoke test), fidelity_against_ori
 data/  cache/           inputs (see their READMEs)
 ```
 
-## Before you archive (Zenodo)
-- [ ] Add `data/blocks.csv` hash (printed by the run) and both cache files; run once on the real data; confirm `reconciliation.csv` and update any `DIFFERS` rows in the manuscript.
-- [ ] Choose a licence (add `LICENSE`), fill in the citation below, and mint the DOI.
+## Zenodo Archive & Citation
+**Permanent Record:** [https://zenodo.org/records/23799506](https://zenodo.org/records/23799506)  
+**DOI:** [10.5281/zenodo.23799506](https://doi.org/10.5281/zenodo.23799506)  
 
-Selftest and notebook executed with Python 3.12 on two library sets: NumPy 2.4 / pandas 3.0 / SciPy 1.17 / Matplotlib 3.10, and Colab-like NumPy 2.0.2 / pandas 2.2.2 / SciPy 1.14.1 / Matplotlib 3.9.2. Real-data runs have not been executed by the package author. Model: `qwen2.5:7b` (Ollama digest `845dbda0ea48`), temperature 0, seed 42, 5 output tokens.
-
-**Citation:** <authors>. <year>. Reproducibility package for "Retrieving similar past market states to time Ethereum swaps". Zenodo. DOI: <to be assigned>.
+**Citation:**  
+> Mohammad Pasha and Mohammed Ali Shaik. (2026). *Replication Package: Matched-Wait Evaluation of Retrieval-Augmented Transaction Timing under Ethereum EIP-1559*. Zenodo. DOI: [10.5281/zenodo.23799506](https://doi.org/10.5281/zenodo.23799506).
