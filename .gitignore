@@ -11,11 +11,21 @@ venv/
 # Jupyter
 .ipynb_checkpoints
 
-# Office temporary lock files
+# Office / Drafts / Working documents (uploaded to PeerJ portal, not code repo)
 ~$*
+*.docx
+*.pdf
+*dossier*
+*DOSSIER*
+REPORT.md
+inventory.csv
+push_to_github.bat
+/*.png
 
-# Standalone Research Assurance Framework (separate project)
+# Internal frameworks & metadata
 research-assurance/
+problem.toml
+AMICO_REPLICATION.md
 
 # Large distribution zips (hosted on Zenodo)
 *.zip
