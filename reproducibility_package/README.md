@@ -19,6 +19,28 @@ python run_all.py --selftest                              # synthetic data + moc
 1. `data/blocks.csv` - see `data/README.md` (BigQuery query, 320,730 rows).
 2. `cache/ollama_qwen2.5_7b_test_cache.json` and `cache/ablation_v2_llm_store.json` - see `cache/README.md`. Without them use `--mode live` or `--no-llm`.
 
+## Replication and Verification Tiers
+
+To accommodate different reviewer computational budgets and verification goals, the replication suite supports three tiered levels of verification:
+
+- **Tier 1 (Instant Audit — ~5 seconds, zero dependencies):**
+  `ash
+  python trace.py verify --ledger ledger.json --notebook ../code/Supplementary_S1_executed_notebook_rebuilt.ipynb
+  `
+  Validates cryptographic hash parity and number-level provenance between the pre-executed notebook cell outputs and the 105-claim manuscript claims ledger without re-running computations.
+
+- **Tier 2 (Cached Replay — ~3 minutes, CPU only):**
+  `ash
+  python run_all.py --csv data/blocks.csv --mode cache
+  `
+  Re-runs all statistical tests, bootstrap confidence intervals, and table formatting from raw block data using shipped intermediate model inference caches (no GPU or API keys required).
+
+- **Tier 3 (Full Pipeline Re-execution — ~30 seconds for rule baselines; ~1 hour for LLMs):**
+  `ash
+  python run_all.py --csv data/blocks.csv --no-llm     # Rule-based & kNN baselines
+  python run_all.py --csv data/blocks.csv --mode live   # Full live LLM queries via local Ollama (qwen2.5:7b)
+  `
+
 ## What regenerates what
 
 | Manuscript item | Code | Output file(s) in `results/` |
