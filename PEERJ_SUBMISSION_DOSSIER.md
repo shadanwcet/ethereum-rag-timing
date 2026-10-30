@@ -112,7 +112,7 @@ Retrieval-augmented generation, k-nearest neighbors, Ethereum base fee, EIP-1559
 
 ### Data and Code Availability
 ```text
-Historical Ethereum block headers are publicly available via Google Cloud BigQuery (bigquery-public-data.crypto_ethereum.blocks). A single unified Zenodo record (DOI: 10.5281/zenodo.10820011) contains the truncated contiguous evaluation dataset (blocks.csv, 9.8 MB, SHA256: d5184d44032dd4aacadc90ce58c3d3e7603a03e510a1bc98f7477b756aab76a2), precomputed feature caches, evaluation outputs, benchmark suites, and complete Python replication source code. In addition, blocks.csv is uploaded as PeerJ Supplemental Information (<30 MB), and the active codebase is mirrored on GitHub (https://github.com/mohammad-pasha/ethereum-rag-timing).
+Historical Ethereum block headers are publicly available via Google Cloud BigQuery (bigquery-public-data.crypto_ethereum.blocks). A single unified Zenodo record (DOI: 10.5281/zenodo.10820011) contains the truncated contiguous evaluation dataset (blocks.csv, 9.8 MB, SHA256: d5184d44032dd4aacadc90ce58c3d3e7603a03e510a1bc98f7477b756aab76a2), precomputed feature caches, evaluation outputs, benchmark suites, and complete Python replication source code. In addition, blocks.csv is uploaded as PeerJ Supplemental Information (<30 MB), and the active codebase is mirrored on GitHub (https://github.com/shadanwcet/ethereum-rag-timing).
 ```
 
 ### Funding Statement
